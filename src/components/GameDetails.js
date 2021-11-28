@@ -79,7 +79,7 @@ export default function GameDetails(props) {
       fetchRandomGameByGeners(genreId).then((data) => {
         setgamesArr(data.results);
         fetchGameDataByName(
-          data.results[Math.floor(Math.random() * (20 - 1 + 1)) + 1].slug
+          data.results[Math.floor(Math.random() * (19 - 1 + 1)) + 1].slug
         ).then((gameData) => {
           setgameData(gameData);
         });
