@@ -47,7 +47,8 @@ export default function GameDetails(props) {
 
   const handleOnClickTryAgain = (e) => {
     e.preventDefault();
-    let randomGame = gamesArr[Math.floor(Math.random() * (20 - 1 + 1)) + 1];
+    let randomNumber = Math.floor(Math.random() * (19 - 1 + 1)) + 1;
+    let randomGame = gamesArr[randomNumber];
     fetchGameDataByName(randomGame.slug).then((gamedata) => {
       setgameData(gamedata);
     });
